@@ -18,22 +18,25 @@ permalink: /en/publish
 
 ## Prepare
 
-### 1. Become a Member of GitHub Organizations
+### Unregistered
 
-We use [GitHub Organizations](https://github.com/upm-packages) OAuth Application for registry authentication
-So, you need to register a member to Organizations.
+User registration is performed from the command line.
 
-Please apply for registration from [this form](https://forms.gle/2PKmKjcxeGpiZcYB8). Process Member registration as soon as possible.
+```bash
+npm adduser --registry https://upm-packages.dev
+```
 
-### 2. Login to Unofficial Unity Package Manager Registry
+Authentication information is recorded in `~/.npmrc`.
 
-Click the **Login** button at the top right of [Unofficial Unity Package Manager Registry](https://upm-packages.dev) to authenticate GitHub OAuth App.
+### Registered
 
-### 3. Save authentication informations into `~/.npmrc`
+If you have already registered, log in from the command line.
 
-![Authentication Informations](/images/screenshots/auth_info.png)
+```bash
+npm login --registry https://upm-packages.dev
+```
 
-Copy the authentication information displayed at the top of the screen and append it to the end of `~/.npmrc`.
+Authentication information is recorded in `~/.npmrc`.
 
 ## Publish packages
 
