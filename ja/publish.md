@@ -18,21 +18,25 @@ permalink: /ja/publish
 
 ## 事前準備
 
-### 1. GitHub Organizations の Member になる
+### 未登録の場合
 
-レジストリの認証に [upm-packages](https://github.com/upm-packages) という GitHub Organizations の OAuth Application を用いているので、Organizations への Member 登録が必要になります。
+コマンドラインからユーザ登録を行います。
 
-[こちらのフォーム](https://forms.gle/2PKmKjcxeGpiZcYB8) より登録申請を行ってください。可能な限り早めに Member 登録を処理します。
+```bash
+npm adduser --registry https://upm-packages.dev
+```
 
-### 2. Unofficial Unity Package Manager Registry にログインする
+認証情報が `~/.npmrc` に記録されます。
 
-[Unofficial Unity Package Manager Registry](https://upm-packages.dev) の右上にある **ログイン** ボタンを押下し、 GitHub OAuth App の認証を行ってください。
+### 登録済みの場合
 
-### 3. 認証情報を `~/.npmrc` に保存する
+既に登録済みの場合は、コマンドラインからログインを行います。
 
-![認証情報](/images/screenshots/auth_info.png)
+```bash
+npm login --registry https://upm-packages.dev
+```
 
-画面上部に表示される認証情報をコピーし、 `~/.npmrc` の末尾に追記します。
+認証情報が `~/.npmrc` に記録されます。
 
 ## パッケージ登録
 
